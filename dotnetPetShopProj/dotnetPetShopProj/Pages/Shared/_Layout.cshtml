@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] </title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/dotnetPetShopProj.styles.css" asp-append-version="true" />
+
+</head>
+<body>
+
+    <h2>Gal's Pet Shop</h2>
+
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a asp-action="Index"></a></li>
+        <li><a href="#admin">Administrator</a></li>
+        <li><a href="#about">About</a></li>
+    </ul>
+
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,13 @@
+﻿@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<h1>Index</h1>
+
+<select>
+    @foreach (var item in @ViewBag.AllCategories)
+    {
+        <option value="@item"> @item</option>
+    }
+</select>
