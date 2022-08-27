@@ -2,10 +2,12 @@
     ViewData["Title"] = "Index";
     Layout = "~/Pages/Shared/_Layout.cshtml";
 }
+@* add head tag with js*@
+
 
 <h1>Index</h1>
 
-<select>
+<select onchange="chosenCategoryAlert()">
     @foreach (var item in @ViewBag.AllCategories)
     {
         <option value="@item"> @item</option>
