@@ -8,8 +8,33 @@
 <h1>Index</h1>
 
 <select onchange="chosenCategoryAlert()">
+    
+    <option value="all">All</option>
+    
     @foreach (var item in @ViewBag.AllCategories)
     {
         <option value="@item"> @item</option>
     }
 </select>
+
+<table>
+    <thead>
+        <tr>
+            <th>Animal</th>
+            <th>Age</th>
+            <th>Id</th>
+            <th>Category</th>
+        </tr>
+    </thead>
+    <tbody>
+    @foreach (var animal in @ViewBag.AllAnimals) 
+    {
+        <tr>
+            <td@animal.AnimalName</td>
+             <td@animal.Age</td>
+            <td@animal.AnimalId</td>
+            <td@animal.CategoryId</td>
+    </tr>
+    }
+    </tbody>
+</table>
