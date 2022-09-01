@@ -10,10 +10,24 @@ namespace dotnetPetShopProj.Services
         //{
         //    _petShopMockData = petShopMockData;
         //}
+        
         public List<Animal>? animals;
+        //no need for this list if using repo
 
+        IRepository<Animal> _animalRepo;
+        IRepository<Category> _categoryRepo;
+        //inject repo
+        
+        public PetShopService(IRepository<Animal> animalRepo, IRepository<Category> categoryRepo)
+        {
+            _animalRepo = animalRepo;
+            _categoryRepo = categoryRepo;
+        }
+        
         public List<Animal> GetAllAnimals()
         {
+        
+        //return _animalRepo.GetFullList();
             animals = new List<Animal>()
             {
                 new Animal() { AnimalId = 1, Age = 1, AnimalName = "Parrot", CategoryId = 1, CommentAmount = 0},
@@ -29,7 +43,7 @@ namespace dotnetPetShopProj.Services
 
         public List<Category> GetCategories()
         {
-            //return _petShopMockData.CreateCategoryData();
+        //return _categoryRepo.GetFullList();
             List<Category> categories = new List<Category>()
             {
                 new Category() { CategoryId = 1, Name = "Bird"},
