@@ -1,3 +1,5 @@
+public class AnimalRepository : IAnimalRepository
+
 public List<Animal> GetAnimalList()
 {
  List<Animal> animals = new List<Animal>()
@@ -11,4 +13,5 @@ public List<Animal> GetAnimalList()
             };
 
             return animals;
+}
 }
