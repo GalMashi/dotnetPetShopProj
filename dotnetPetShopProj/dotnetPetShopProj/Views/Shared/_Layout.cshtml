@@ -14,9 +14,9 @@
     <h2>Gal's Pet Shop</h2>
 
     <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a asp-action="Index"></a></li>
-        <li><a href="#admin">Administrator</a></li>
+        <li><a asp-action="Index" asp-controller="Home">Home</a></li>
+        <li><a asp-action="Index" asp-controller="Catalogue"> Catalogue</a></li>
+        <li><a asp-action="Index" asp-controller="Admin">Administrator</a></li>
         <li><a href="#about">About</a></li>
     </ul>
 
@@ -25,6 +25,6 @@
             @RenderBody()
         </main>
     </div>
-
+    @RenderSection("Scripts", required:false)
 </body>
 </html>

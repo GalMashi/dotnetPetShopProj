@@ -467,7 +467,6 @@ C:\Users\galma\source\repos\dotnetPetShopProj_2nd\dotnetPetShopProj\dotnetPetSho
 C:\Users\galma\source\repos\dotnetPetShopProj_2nd\dotnetPetShopProj\dotnetPetShopProj\obj\Debug\net6.0\dotnetPetShopProj.RazorAssemblyInfo.cs
 C:\Users\galma\source\repos\dotnetPetShopProj_2nd\dotnetPetShopProj\dotnetPetShopProj\obj\Debug\net6.0\staticwebassets.build.json
 C:\Users\galma\source\repos\dotnetPetShopProj_2nd\dotnetPetShopProj\dotnetPetShopProj\obj\Debug\net6.0\staticwebassets.development.json
-C:\Users\galma\source\repos\dotnetPetShopProj_2nd\dotnetPetShopProj\dotnetPetShopProj\obj\Debug\net6.0\scopedcss\Pages\Shared\_Layout.cshtml.rz.scp.css
 C:\Users\galma\source\repos\dotnetPetShopProj_2nd\dotnetPetShopProj\dotnetPetShopProj\obj\Debug\net6.0\scopedcss\bundle\dotnetPetShopProj.styles.css
 C:\Users\galma\source\repos\dotnetPetShopProj_2nd\dotnetPetShopProj\dotnetPetShopProj\obj\Debug\net6.0\scopedcss\projectbundle\dotnetPetShopProj.bundle.scp.css
 C:\Users\galma\source\repos\dotnetPetShopProj_2nd\dotnetPetShopProj\dotnetPetShopProj\obj\Debug\net6.0\dotnetPetShopProj.csproj.CopyComplete
@@ -476,3 +475,4 @@ C:\Users\galma\source\repos\dotnetPetShopProj_2nd\dotnetPetShopProj\dotnetPetSho
 C:\Users\galma\source\repos\dotnetPetShopProj_2nd\dotnetPetShopProj\dotnetPetShopProj\obj\Debug\net6.0\dotnetPetShopProj.pdb
 C:\Users\galma\source\repos\dotnetPetShopProj_2nd\dotnetPetShopProj\dotnetPetShopProj\obj\Debug\net6.0\dotnetPetShopProj.genruntimeconfig.cache
 C:\Users\galma\source\repos\dotnetPetShopProj_2nd\dotnetPetShopProj\dotnetPetShopProj\obj\Debug\net6.0\ref\dotnetPetShopProj.dll
+C:\Users\galma\source\repos\dotnetPetShopProj_2nd\dotnetPetShopProj\dotnetPetShopProj\obj\Debug\net6.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css

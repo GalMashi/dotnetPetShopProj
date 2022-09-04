@@ -1,0 +1,30 @@
+﻿@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<head>
+    <script src="~/js/AdminLogIn.js"></script>
+</head>
+
+<h1>Please enter your login details</h1>
+
+<form action="/Admin/Home" method="post" onsubmit="return logInCheck2()">
+    <table>
+        <tr>
+            <td> Username:&nbsp;</td>
+            <td>
+                <input type="text" name="fname" class="username" required>
+            </td>
+        </tr>
+        <tr>
+            <td>Password:&nbsp;</td>
+            <td>
+                <input type="password" name="fpass"class="password" required>
+            </td>
+        </tr>
+    </table>
+
+    <br />
+    <input type="submit" value="Submit">
+</form>
+

@@ -12,33 +12,37 @@ namespace dotnetPetShopProj.Services
         //}
         public List<Animal>? animals;
 
+        public List<Category>? Categories;
+
+    public List<Category> GetCategories()
+    {
+        //return _petShopMockData.CreateCategoryData();
+        Categories = new List<Category>()
+        {
+            new Category() { CategoryId = 1, Name = "Bird"},
+            new Category() { CategoryId = 2, Name = "Mammal"},
+            new Category() { CategoryId = 3, Name = "Reptile"},
+            new Category() { CategoryId = 4, Name = "Insect"}
+        };
+
+        return Categories;
+    }
+
         public List<Animal> GetAllAnimals()
         {
-            animals = new List<Animal>()
+            var Cts = GetCategories();
+
+            List<Animal> animals = new List<Animal>()
             {
-                new Animal() { AnimalId = 1, Age = 1, AnimalName = "Parrot", CategoryId = 1, CommentAmount = 0},
-                new Animal() { AnimalId = 2, Age = 3, AnimalName = "House Cat", CategoryId = 2, CommentAmount = 7},
-                new Animal() { AnimalId = 3, Age = 6, AnimalName = "Dog", CategoryId = 2, CommentAmount = 5},
-                new Animal() { AnimalId = 4, Age = 6, AnimalName = "House Cat", CategoryId = 2, CommentAmount = 1},
-                new Animal() { AnimalId = 5, Age = 2, AnimalName = "Common House Lizard", CategoryId = 3, CommentAmount = 0},
-                new Animal() { AnimalId = 6, Age = 8, AnimalName = "Hornet", CategoryId = 4, CommentAmount = 3},
+                new Animal() { AnimalId = 1, Age = "1", AnimalName = "Parrot", Category = Cts.First(c => c.CategoryId == 1), CommentAmount = 0, PictureName=""},
+                new Animal() { AnimalId = 2, Age = "3", AnimalName = "House Cat", Category = Cts.First(c => c.CategoryId == 2), CommentAmount = 0},
+                new Animal() { AnimalId = 3, Age = "6", AnimalName = "Dog", Category = Cts.First(c => c.CategoryId == 2), CommentAmount = 0},
+                new Animal() { AnimalId = 4, Age = "6", AnimalName = "House Cat", Category = Cts.First(c => c.CategoryId == 2), CommentAmount = 0},
+                new Animal() { AnimalId = 5, Age = "6", AnimalName = "Common House Lizard", Category = Cts.First(c => c.CategoryId == 3), CommentAmount = 0},
+                new Animal() { AnimalId = 6, Age = "8 days", AnimalName = "Hornet", Category = Cts.First(c => c.CategoryId == 4), CommentAmount = 0}
             };
 
             return animals;
-        }
-
-        public List<Category> GetCategories()
-        {
-            //return _petShopMockData.CreateCategoryData();
-            List<Category> categories = new List<Category>()
-            {
-                new Category() { CategoryId = 1, Name = "Bird"},
-                new Category() { CategoryId = 2, Name = "Mammal"},
-                new Category() { CategoryId = 3, Name = "Reptile"},
-                new Category() { CategoryId = 4, Name = "Insect"}
-            };
-
-            return categories;
         }
 
         public CollectionDataModel GetCollectionData()
@@ -59,6 +63,11 @@ namespace dotnetPetShopProj.Services
                             .Take(2)
                             .ToList();
             return TopTwoAnimals;
+        }
+
+        public Animal GetAnimalById(int id)
+        {
+            return GetAllAnimals().First(c => c.CategoryId == id);
         }
     }
 }

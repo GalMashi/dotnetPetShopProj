@@ -1,10 +1,10 @@
 ﻿@model IEnumerable<dotnetPetShopProj.Models.Animal>
 @{
-    ViewData["Title"] = "Index";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewData["Title"] = "Home";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
-<h1>Index</h1>
+<h1>Our Two Most Asked About Animals</h1>
 
 <table>
     @foreach (var CurrentAnimal in @Model)

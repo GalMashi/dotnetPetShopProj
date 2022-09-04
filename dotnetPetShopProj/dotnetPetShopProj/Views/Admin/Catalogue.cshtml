@@ -1,7 +1,7 @@
 ﻿@model IEnumerable<dotnetPetShopProj.Models.Animal>
 @{
-    ViewData["Title"] = "Index";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewData["Title"] = "Catalogue";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
 <head>
@@ -37,10 +37,10 @@
             @foreach (var animal in @Model)
             {
                 <tr class="content">
-                    <td><a asp-action="AnimalDetails" asp-route-selAnimalDetails="@animal.AnimalId">@animal.AnimalName</a></td>
+                    <td>@animal.AnimalName</td>
                     <td>@animal.Age</td>
                     <td>@animal.AnimalId</td>
-                    <td>@animal.Category.Name</td>
+                    <td class="cat">@animal.Category.Name</td>
                 </tr>
             }
 
