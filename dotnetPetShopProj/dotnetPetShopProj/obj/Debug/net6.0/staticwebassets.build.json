@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "DEeMzPu2qcaZxy4quXfIF0dM6Jzmp2YXuaREtiZkYdM=",
+  "Hash": "qAJWrcONxYTDmRp+kTgJWBh3CgnF8gK80sQI3g8nQeI=",
   "Source": "dotnetPetShopProj",
   "BasePath": "_content/dotnetPetShopProj",
   "Mode": "Default",
@@ -49,6 +49,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\galma\\source\\repos\\dotnetPetShopProj_2nd\\dotnetPetShopProj\\dotnetPetShopProj\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\dotnetPetShopProj.bundle.scp.css"
+    },
+    {
+      "Identity": "C:\\Users\\galma\\source\\repos\\dotnetPetShopProj_2nd\\dotnetPetShopProj\\dotnetPetShopProj\\wwwroot\\AnimalComments\\ParrotComments.txt",
+      "SourceId": "dotnetPetShopProj",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\galma\\source\\repos\\dotnetPetShopProj_2nd\\dotnetPetShopProj\\dotnetPetShopProj\\wwwroot\\",
+      "BasePath": "_content/dotnetPetShopProj",
+      "RelativePath": "AnimalComments/ParrotComments.txt",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\AnimalComments\\ParrotComments.txt"
     },
     {
       "Identity": "C:\\Users\\galma\\source\\repos\\dotnetPetShopProj_2nd\\dotnetPetShopProj\\dotnetPetShopProj\\wwwroot\\css\\site.css",
@@ -136,12 +153,12 @@
       "OriginalItemSpec": "wwwroot\\js\\CatalogueTableUpdate.js"
     },
     {
-      "Identity": "C:\\Users\\galma\\source\\repos\\dotnetPetShopProj_2nd\\dotnetPetShopProj\\dotnetPetShopProj\\wwwroot\\js\\site.js",
+      "Identity": "C:\\Users\\galma\\source\\repos\\dotnetPetShopProj_2nd\\dotnetPetShopProj\\dotnetPetShopProj\\wwwroot\\js\\CommentRegistration.js",
       "SourceId": "dotnetPetShopProj",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\galma\\source\\repos\\dotnetPetShopProj_2nd\\dotnetPetShopProj\\dotnetPetShopProj\\wwwroot\\",
       "BasePath": "_content/dotnetPetShopProj",
-      "RelativePath": "js/site.js",
+      "RelativePath": "js/CommentRegistration.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -150,7 +167,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\js\\site.js"
+      "OriginalItemSpec": "wwwroot\\js\\CommentRegistration.js"
     },
     {
       "Identity": "C:\\Users\\galma\\source\\repos\\dotnetPetShopProj_2nd\\dotnetPetShopProj\\dotnetPetShopProj\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",

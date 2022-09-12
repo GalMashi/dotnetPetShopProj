@@ -2,9 +2,9 @@
 
 namespace dotnetPetShopProj.Repositories
 {
-    public class CategoryRepository<T> : IRepository<T>
+    public class CategoryRepository : ICategoryRepository
     {
-        public List<T> GetFullList()
+        public List<Category> GetFullList()
         {
             List<Category> Categories = new List<Category>()
         {
@@ -14,7 +14,7 @@ namespace dotnetPetShopProj.Repositories
             new Category() { CategoryId = 4, Name = "Insect"}
         };
 
-            return Categories as List<T>;
+            return Categories;
         }
     }
 }

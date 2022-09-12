@@ -4,13 +4,13 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Index</h1>
+<h1>Our Two Most Asked About Animals</h1>
 
-<table>
+<table class="table">
     @foreach (var CurrentAnimal in @Model)
     {
         <tr>
-            <td>@CurrentAnimal.AnimalName @*&nbsp;&nbsp;*@</td>
+            <td>@CurrentAnimal.AnimalName </td>
         </tr>
     }
 </table>

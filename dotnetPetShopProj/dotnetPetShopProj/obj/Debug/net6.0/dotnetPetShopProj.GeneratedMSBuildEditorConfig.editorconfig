@@ -15,10 +15,6 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\galma\source\repos\dotnetPetShopProj_2nd\dotnetPetShopProj\dotnetPetShopProj
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/galma/source/repos/dotnetPetShopProj_2nd/dotnetPetShopProj/dotnetPetShopProj/Views/AddAnimal/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRkQW5pbWFsXEluZGV4LmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/galma/source/repos/dotnetPetShopProj_2nd/dotnetPetShopProj/dotnetPetShopProj/Views/Admin/Catalogue.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQ2F0YWxvZ3VlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 

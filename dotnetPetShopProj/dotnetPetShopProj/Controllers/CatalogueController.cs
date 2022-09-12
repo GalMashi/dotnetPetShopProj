@@ -22,7 +22,6 @@ namespace dotnetPetShopProj.Controllers
         public IActionResult AnimalDetails(int selAnimalId)
         {
             var selAnimal = _shopService.GetAnimalById(selAnimalId);
-            ViewBag.selAnimalComment = selAnimal.Comments;
             return View(selAnimal);
         }
     }

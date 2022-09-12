@@ -3,6 +3,9 @@
     ViewData["Title"] = "AnimalDetails";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+<head>
+    <script src="~/js/CommentRegistration.js"></script>
+</head>
 
 <h1>AnimalDetails</h1>
 
@@ -11,7 +14,14 @@
         <td>@Model.AnimalName&nbsp;</td>
         <td>@Model.Age&nbsp;</td>
         <td>@Model.Category.Name&nbsp;</td>
-        <td>@Model.Description&nbsp;</td>
+        @if (@Model.Description != null)
+        {
+            <td>@Model.Description&nbsp;</td>
+        }
+        else
+        {
+            <td>No Description currently</td>
+        }
         <td>
             <table class="commentList">
                 @if (@ViewBag.selAnimalComment != null)
@@ -31,7 +41,10 @@
                 else
                 {
                     <tr>
-                        <td><input type="text" placeholder="enter your questions here"/></td>
+                        <td>
+                            <input id="commentBox" type="text" placeholder="enter your questions here" />
+                            <input type="button" value="submit" onclick="regToTxt()" />
+                        </td>
                     </tr>
                 }
 
