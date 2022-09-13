@@ -1,27 +1,31 @@
-﻿using dotnetPetShopProj.Services;
+﻿using dotnetPetShopProj.Repositories;
+using dotnetPetShopProj.Services;
 using Microsoft.AspNetCore.Mvc;
 
 namespace dotnetPetShopProj.Controllers
 {
     public class CatalogueController : Controller
     {
-        IPetShopService _shopService;
+        IAnimalRepository _animalRepo;
+        ICategoryRepository _categoryRepo;
 
-        public CatalogueController(IPetShopService shopService)
+        public CatalogueController(IAnimalRepository animalRepo, ICategoryRepository categoryRepo)
         {
-            _shopService = shopService;
+            _categoryRepo = categoryRepo;
+            _animalRepo = animalRepo;
         }
 
         public IActionResult Index()
         {
-            ViewBag.AllAnimals = _shopService.GetCollectionData().AnimalsModel;
-            ViewBag.AllCategories = _shopService.GetCollectionData().CategoriesModel;
-            return View(_shopService.GetAllAnimals());
+            ViewBag.AllAnimals = _animalRepo.GetFullList();
+            ViewBag.AllCategories = _categoryRepo.GetFullList();
+            return View(_animalRepo.GetFullList());
         }
+
 
         public IActionResult AnimalDetails(int selAnimalId)
         {
-            var selAnimal = _shopService.GetAnimalById(selAnimalId);
+            var selAnimal = _animalRepo.GetFullList().First(c=> c.CategoryId == selAnimalId);
             return View(selAnimal);
         }
     }

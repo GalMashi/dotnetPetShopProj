@@ -6,17 +6,20 @@ namespace dotnetPetShopProj.Data
 {
     public class CategoryContext : DbContext
     {
-        ICategoryRepository _categoryRepo;
+        
         public DbSet<Category>? Categories { get; set; }
 
-        public CategoryContext(DbContextOptions<CategoryContext> options, ICategoryRepository categoryRepo) : base(options)
-        {
-            _categoryRepo = categoryRepo;
-        }
+        public CategoryContext(DbContextOptions<CategoryContext> options) : base(options){ }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Category>().HasData(_categoryRepo.GetFullList());
+            modelBuilder.Entity<Category>().HasData(
+            new Category() { CategoryId = 1, Name = "Bird" },
+            new Category() { CategoryId = 2, Name = "Mammal" },
+            new Category() { CategoryId = 3, Name = "Reptile" },
+            new Category() { CategoryId = 4, Name = "Insect" }
+
+        );
         }
     }
 }

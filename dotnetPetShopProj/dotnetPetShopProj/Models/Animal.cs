@@ -12,8 +12,8 @@ namespace dotnetPetShopProj.Models
         public int CommentAmount { get; set; }
         public ICollection<Comment>? Comments { get; set; }
 
-        [ForeignKey("CategoryId")]
+
+        public Category? AnimalCategory { get; set; }
         public int CategoryId { get; set; }
-        public Category? Category { get; set; }
     }
 }

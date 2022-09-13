@@ -1,4 +1,5 @@
-﻿using dotnetPetShopProj.Models;
+﻿using dotnetPetShopProj.Data;
+using dotnetPetShopProj.Models;
 
 namespace dotnetPetShopProj.Repositories
 {

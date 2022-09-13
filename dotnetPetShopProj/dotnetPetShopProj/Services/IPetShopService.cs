@@ -7,7 +7,6 @@ namespace dotnetPetShopProj.Services
         List<Animal> GetAllAnimals();
         List<Animal> GetTopTwoAnimals();
         List<Category> GetCategories();
-        CollectionDataModel GetCollectionData();
         Animal GetAnimalById(int id);
     }
 }
