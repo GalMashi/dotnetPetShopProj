@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\galma\\source\\repos\\dotnetPetShopProj_2nd\\dotnetPetShopProj\\dotnetPetShopProj\\dotnetPetShopProj.csproj": {}
+    "C:\\Users\\galma\\Desktop\\dotnetPetShop\\dotnetPetShopProj\\dotnetPetShopProj\\dotnetPetShopProj.csproj": {}
   },
   "projects": {
-    "C:\\Users\\galma\\source\\repos\\dotnetPetShopProj_2nd\\dotnetPetShopProj\\dotnetPetShopProj\\dotnetPetShopProj.csproj": {
+    "C:\\Users\\galma\\Desktop\\dotnetPetShop\\dotnetPetShopProj\\dotnetPetShopProj\\dotnetPetShopProj.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\galma\\source\\repos\\dotnetPetShopProj_2nd\\dotnetPetShopProj\\dotnetPetShopProj\\dotnetPetShopProj.csproj",
+        "projectUniqueName": "C:\\Users\\galma\\Desktop\\dotnetPetShop\\dotnetPetShopProj\\dotnetPetShopProj\\dotnetPetShopProj.csproj",
         "projectName": "dotnetPetShopProj",
-        "projectPath": "C:\\Users\\galma\\source\\repos\\dotnetPetShopProj_2nd\\dotnetPetShopProj\\dotnetPetShopProj\\dotnetPetShopProj.csproj",
+        "projectPath": "C:\\Users\\galma\\Desktop\\dotnetPetShop\\dotnetPetShopProj\\dotnetPetShopProj\\dotnetPetShopProj.csproj",
         "packagesPath": "C:\\Users\\galma\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\galma\\source\\repos\\dotnetPetShopProj_2nd\\dotnetPetShopProj\\dotnetPetShopProj\\obj\\",
+        "outputPath": "C:\\Users\\galma\\Desktop\\dotnetPetShop\\dotnetPetShopProj\\dotnetPetShopProj\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -75,7 +75,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.303\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.320\\RuntimeIdentifierGraph.json"
         }
       }
     }

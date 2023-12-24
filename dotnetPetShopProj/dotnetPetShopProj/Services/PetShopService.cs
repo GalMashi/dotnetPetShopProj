@@ -1,5 +1,4 @@
-﻿using dotnetPetShopProj.Data;
-using dotnetPetShopProj.Models;
+﻿using dotnetPetShopProj.Models;
 using dotnetPetShopProj.Repositories;
 
 namespace dotnetPetShopProj.Services
@@ -28,7 +27,7 @@ namespace dotnetPetShopProj.Services
             return TopTwoAnimals;
         }
 
-        public Animal GetAnimalById(int id) => GetAllAnimals().First(/*c => c.CategoryId == id*/);
+        public Animal GetAnimalById(int id) => GetAllAnimals().FirstOrDefault(c => c.AnimalId == id);
 
     }
 }

@@ -1,18 +1,14 @@
-﻿using dotnetPetShopProj.Repositories;
-using dotnetPetShopProj.Services;
+﻿using dotnetPetShopProj.Services;
 using Microsoft.AspNetCore.Mvc;
 
 namespace dotnetPetShopProj.Controllers
 {
     public class AdminController : Controller
     {
-
-        IAnimalRepository _animalRepo;
-        ICategoryRepository _categoryRepo;
-        public AdminController(IAnimalRepository animalRepo, ICategoryRepository categoryRepo)
+        IPetShopService _petShopService;
+        public AdminController(IPetShopService petShopService)
         {
-            _animalRepo = animalRepo;
-            _categoryRepo = categoryRepo;
+            _petShopService = petShopService;
         }
 
         public IActionResult Index()
@@ -22,14 +18,14 @@ namespace dotnetPetShopProj.Controllers
 
         public IActionResult Home()
         {
-            return View(_animalRepo.GetFullList());
+            return View(_petShopService.GetAllAnimals());
         }
 
         public IActionResult Catalogue()
         {
-            ViewBag.AllAnimals = _animalRepo.GetFullList();
-            ViewBag.AllCategories = _categoryRepo.GetFullList();
-            return View(_animalRepo.GetFullList());
+            ViewBag.AllAnimals = _petShopService.GetAllAnimals();
+            ViewBag.AllCategories = _petShopService.GetCategories();
+            return View(_petShopService.GetAllAnimals());
         }
     }
 }

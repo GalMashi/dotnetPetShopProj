@@ -1,23 +1,18 @@
-﻿using dotnetPetShopProj.Repositories;
-using dotnetPetShopProj.Services;
+﻿using dotnetPetShopProj.Services;
 using Microsoft.AspNetCore.Mvc;
 
 namespace dotnetPetShopProj.Controllers
 {
     public class HomeController : Controller
     {
-        //IPetShopService _shopService;
-        IAnimalRepository _animalRepo;
-        public HomeController(IAnimalRepository animalRepo)
+        IPetShopService _petShopService;
+        public HomeController(IPetShopService petShopService)
         {
-            _animalRepo = animalRepo;
+            _petShopService = petShopService;
         }
         public IActionResult Index()
         {
-            return View(_animalRepo.GetFullList()
-                .OrderByDescending(a => a.CommentAmount)
-                            .Take(2)
-                            .ToList());
+            return View(_petShopService.GetTopTwoAnimals());
         }
     }
 }

@@ -8,7 +8,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddRazorPages();
 builder.Services.AddControllersWithViews();
-//builder.Services.AddSingleton<IPetShopService, PetShopService>();
+builder.Services.AddTransient<IPetShopService, PetShopService>();
 builder.Services.AddTransient<IAnimalRepository, AnimalRepository>();
 builder.Services.AddTransient<ICategoryRepository, CategoryRepository>();
 builder.Services.AddDbContext <PetShopContext>(options => options.UseSqlite("Data Source=c:\\temp\\PetShop.db"));

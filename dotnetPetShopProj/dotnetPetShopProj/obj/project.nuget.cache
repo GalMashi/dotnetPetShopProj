@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ZkAXgkO8PbIFKfm6eNUly1ByoNkQguWsW5S3VsL0mZRuSbt9Tpgqn3nAkSLbJ/fsltxEBOjSAywdExm3ST8bVg==",
+  "dgSpecHash": "hotHj7L9MpdUWEFhTgJwlCvBdUgst5CaYkoTTxZSTvsbLyC5/CHbJqbPSN8QkDAAjZ6rl+/sq1iMLe3vX/OxNQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\galma\\source\\repos\\dotnetPetShopProj_2nd\\dotnetPetShopProj\\dotnetPetShopProj\\dotnetPetShopProj.csproj",
+  "projectFilePath": "C:\\Users\\galma\\Desktop\\dotnetPetShop\\dotnetPetShopProj\\dotnetPetShopProj\\dotnetPetShopProj.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\galma\\.nuget\\packages\\humanizer.core\\2.2.0\\humanizer.core.2.2.0.nupkg.sha512",
     "C:\\Users\\galma\\.nuget\\packages\\messagepack\\2.1.152\\messagepack.2.1.152.nupkg.sha512",

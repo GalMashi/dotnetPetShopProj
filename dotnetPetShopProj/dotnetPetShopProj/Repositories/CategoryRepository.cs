@@ -11,7 +11,7 @@ namespace dotnetPetShopProj.Repositories
             _petShopContext = petShopContext;
         }
 
-        public List<Category> GetFullList() => _petShopContext.Categories.ToList();
+        public List<Category> GetFullList() => _petShopContext.Categories!.ToList();
 
 
     }
