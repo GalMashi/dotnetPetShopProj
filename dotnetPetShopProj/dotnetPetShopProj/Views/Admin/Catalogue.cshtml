@@ -37,10 +37,10 @@
             @foreach (var animal in @Model)
             {
                 <tr class="content">
-                    <td>@animal.AnimalName</td>
+                    <td><a asp-action="AdminAnimalDetails" asp-route-selAnimalDetails="@animal.AnimalId">@animal.AnimalName</a></td>
                     <td>@animal.Age</td>
                     <td>@animal.AnimalId</td>
-                    <td class="cat">@animal.AnimalCategory.Name</td>
+                    <td>@animal.AnimalCategory.Name</td>
                 </tr>
             }
 

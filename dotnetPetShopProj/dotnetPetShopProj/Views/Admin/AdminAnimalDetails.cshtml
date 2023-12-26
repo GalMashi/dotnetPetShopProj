@@ -1,0 +1,49 @@
+﻿@model dotnetPetShopProj.Models.Animal;
+@{
+    ViewData["Title"] = "AdminAnimalDetails";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<head>
+    <script src="~/js/CommentRegistration.js"></script>
+</head>
+
+<h1>AnimalDetails</h1>
+
+<table>
+    <tr>
+        <td>@Model.AnimalName&nbsp;</td>
+        <td>@Model.Age&nbsp;</td>
+@*        <td>@Model.Category.Name&nbsp;</td>
+*@        @if (@Model.Description != null)
+        {
+            <td>@Model.Description&nbsp;</td>
+        }
+        else
+        {
+            <td>No Description currently</td>
+        }
+        <td>
+            <table class="commentList">
+                @if (@ViewBag.selAnimalComment != null)
+                {
+                    @foreach (var comment in @ViewBag.selAnimalComment)
+                    {
+                        <tr>
+                            <td>@comment.CommentContent</td>
+
+                        </tr>
+
+                    }
+                }
+                
+                    <tr>
+                        <td>
+                            <input id="commentBox" type="text" placeholder="enter your questions here" />
+                            <input type="button" value="submit" onclick="regToTxt()" />
+                        </td>
+                    </tr>
+
+            </table>
+        </td>
+    </tr>
+</table>

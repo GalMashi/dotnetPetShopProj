@@ -10,7 +10,8 @@
     @foreach (var CurrentAnimal in @Model)
     {
         <tr>
-            <td>@CurrentAnimal.AnimalName </td>
+            @*add direct links to the animals*@
+            <td> <a></a> @CurrentAnimal.AnimalName </td>
         </tr>
     }
 </table>
