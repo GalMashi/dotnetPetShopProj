@@ -8,5 +8,6 @@ namespace dotnetPetShopProj.Services
         List<Animal> GetTopTwoAnimals();
         List<Category> GetCategories();
         Animal GetAnimalById(int id);
+        List<Comment> GetCommentsByAnimal(int selAnimalId);
     }
 }

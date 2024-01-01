@@ -8,10 +8,13 @@ namespace dotnetPetShopProj.Services
 
         ICategoryRepository _categoryRepo;
         IAnimalRepository _animalRepo;
-        public PetShopService(IAnimalRepository animalRepo, ICategoryRepository categoryRepo)
+        ICommentRepository _commentRepo;
+        public PetShopService(IAnimalRepository animalRepo, ICategoryRepository categoryRepo, ICommentRepository commentRepo)
         {
             _animalRepo = animalRepo;
             _categoryRepo = categoryRepo;
+            _commentRepo = commentRepo;
+            //connect();
         }
         public List<Category> GetCategories() => _categoryRepo.GetFullList();
 
@@ -27,7 +30,19 @@ namespace dotnetPetShopProj.Services
             return TopTwoAnimals;
         }
 
-        public Animal GetAnimalById(int id) => GetAllAnimals().FirstOrDefault(c => c.AnimalId == id);
+        public Animal GetAnimalById(int id) => GetAllAnimals().Find(a => a.AnimalId.Equals(id));
 
+        //public void connect()
+        //{
+        //    foreach (var animal in GetAllAnimals()) 
+        //    {
+        //        animal.CommentAmount = _commentRepo.GetComments().Where(a => a.CommAnimalId == animal.AnimalId).Count();
+        //    }
+        //}
+
+        public List<Comment> GetCommentsByAnimal(int animalId)
+        {
+            return _commentRepo.GetCommentsByAnimal(animalId);
+        }
     }
 }

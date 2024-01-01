@@ -13,8 +13,8 @@
     <tr>
         <td>@Model.AnimalName&nbsp;</td>
         <td>@Model.Age&nbsp;</td>
-@*        <td>@Model.Category.Name&nbsp;</td>
-*@        @if (@Model.Description != null)
+        @*        <td>@Model.Category.Name&nbsp;</td>
+        *@        @if (@Model.Description != null)
         {
             <td>@Model.Description&nbsp;</td>
         }
@@ -24,24 +24,22 @@
         }
         <td>
             <table class="commentList">
-                @if (@ViewBag.selAnimalComment != null)
+                @if (@ViewBag.AnimalComments != null)
                 {
-                    @foreach (var comment in @ViewBag.selAnimalComment)
-                    {
-                        <tr>
-                            <td>@comment.CommentContent</td>
-
-                        </tr>
-
-                    }
-                }
-                
                     <tr>
-                        <td>
-                            <input id="commentBox" type="text" placeholder="enter your questions here" />
-                            <input type="button" value="submit" onclick="regToTxt()" />
-                        </td>
+                        @foreach (var comment in ViewBag.AnimalComments)
+                        {
+                            <td> @comment.CommentContent</td>
+                        }
                     </tr>
+                }
+
+                <tr>
+                    <td>
+                        <input id="commentBox" type="text" placeholder="enter your questions here" />
+                        <input type="button" value="submit" onclick="regToTxt()" />
+                    </td>
+                </tr>
 
             </table>
         </td>

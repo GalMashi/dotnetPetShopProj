@@ -17,6 +17,11 @@ namespace dotnetPetShopProj.Controllers
 
 
         [Route("AnimalDetails/{selAnimalDetails:int}")]
-        public IActionResult AnimalDetails(int selAnimalDetails) => View(_petShopService.GetAnimalById(selAnimalDetails));
+        public IActionResult AnimalDetails(int selAnimalDetails)
+        {
+            
+            ViewBag.AnimalComments = _petShopService.GetCommentsByAnimal(selAnimalDetails);
+            return View(_petShopService.GetAnimalById(selAnimalDetails));
+        }
     }
 }

@@ -11,7 +11,9 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddTransient<IPetShopService, PetShopService>();
 builder.Services.AddTransient<IAnimalRepository, AnimalRepository>();
 builder.Services.AddTransient<ICategoryRepository, CategoryRepository>();
-builder.Services.AddDbContext <PetShopContext>(options => options.UseSqlite("Data Source=c:\\temp\\PetShop.db"));
+builder.Services.AddTransient<ICommentRepository, CommentRepository>();
+builder.Services.AddDbContext<PetShopContext>(options => options.UseSqlite("Data Source=c:\\temp\\PetShop.db"));
+//builder.Services.AddDbContext<CommentContext>(options => options.UseSqlite("Data Source=c:\\temp\\PetShopComments.db"));
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -23,8 +25,11 @@ if (!app.Environment.IsDevelopment())
 using (var scope = app.Services.CreateScope())
 {
     var Ctx = scope.ServiceProvider.GetRequiredService<PetShopContext>();
+    //var CommCtx = scope.ServiceProvider.GetRequiredService<CommentContext>();
     Ctx.Database.EnsureDeleted();
+    //CommCtx.Database.EnsureDeleted();
     Ctx.Database.EnsureCreated();
+    //CommCtx.Database.EnsureCreated();
 }
 
 
