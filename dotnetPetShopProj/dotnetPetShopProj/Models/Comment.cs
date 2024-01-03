@@ -2,7 +2,7 @@
 
 namespace dotnetPetShopProj.Models
 {
-    [PrimaryKey(nameof(CommentId))]
+    //[PrimaryKey(nameof(CommentId))]
     public class Comment
     {
         public int CommentId { get; set; }

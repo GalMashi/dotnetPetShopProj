@@ -1,4 +1,5 @@
-﻿using dotnetPetShopProj.Models;
+﻿using dotnetPetShopProj.Entities;
+using dotnetPetShopProj.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace dotnetPetShopProj.Data
@@ -8,18 +9,35 @@ namespace dotnetPetShopProj.Data
         public DbSet<Animal>? Animals { get; set; }
         public DbSet<Category>? Categories { get; set; }
         public DbSet<Comment>? Comments { get; set; }
-        public DbSet<UserEntity>? Users { get; set; }
+        public DbSet<User>? Users { get; set; }
 
         public PetShopContext(DbContextOptions<PetShopContext> options) : base(options) { }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<Category>()
+                .HasMany(c => c.Animals)
+                .WithOne(c => c.AnimalCategory)
+                .HasForeignKey(c => c.CategoryId)
+                .HasPrincipalKey(c => c.CategoryId);
+
+            modelBuilder.Entity<Animal>()
+                .HasMany(c => c.Comments)
+                .WithOne(c => c.Animal)
+                .HasForeignKey(c => c.CommAnimalId)
+                .HasPrincipalKey(c => c.AnimalId);
+
+            modelBuilder.Entity<Comment>()
+                .HasOne(c => c.Animal)
+                .WithMany(c => c.Comments);
+
+
             modelBuilder.Entity<Category>().HasData(
-            new Category() { CategoryId = 1, Name = "Bird" },
-            new Category() { CategoryId = 2, Name = "Mammal" },
-            new Category() { CategoryId = 3, Name = "Reptile" },
-            new Category() { CategoryId = 4, Name = "Insect" }
-        );
+        new Category() { CategoryId = 1, Name = "Bird" },
+        new Category() { CategoryId = 2, Name = "Mammal" },
+        new Category() { CategoryId = 3, Name = "Reptile" },
+        new Category() { CategoryId = 4, Name = "Insect" }
+    );
 
             modelBuilder.Entity<Animal>().HasData(
             new Animal() { AnimalId = 1, Age = "1", AnimalName = "Parrot", CategoryId = 1 },

@@ -1,5 +1,5 @@
 ﻿using dotnetPetShopProj.Data;
-using dotnetPetShopProj.Models;
+using dotnetPetShopProj.Entities;
 
 namespace dotnetPetShopProj.Repositories
 {
@@ -8,6 +8,6 @@ namespace dotnetPetShopProj.Repositories
         PetShopContext _petShopContext;
 
         public UserRepository(PetShopContext petShopContext) => _petShopContext = petShopContext;
-        public List<UserEntity> GetAll() => _petShopContext.Users.ToList();
+        public List<User> GetAll() => _petShopContext.Users.ToList();
     }
 }

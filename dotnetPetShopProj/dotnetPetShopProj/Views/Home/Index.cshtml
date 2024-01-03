@@ -11,7 +11,7 @@
     {
         <tr>
             @*add direct links to the animals*@
-            <td> <a></a> @CurrentAnimal.AnimalName </td>
+            <td> <a asp-controller="Catalogue" asp-action="AnimalDetails" asp-route-selAnimalDetails="@CurrentAnimal.AnimalId"> @CurrentAnimal.AnimalName </a></td>
         </tr>
     }
 </table>

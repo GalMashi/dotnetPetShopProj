@@ -1,8 +1,10 @@
 ﻿using dotnetPetShopProj.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace dotnetPetShopProj.Controllers
 {
+    [AllowAnonymous]
     public class CatalogueController : Controller
     {
         IPetShopService _petShopService;

@@ -1,3 +1,4 @@
+using dotnetPetShopProj.Authorization;
 using dotnetPetShopProj.Data;
 using dotnetPetShopProj.Repositories;
 using dotnetPetShopProj.Services;
@@ -8,12 +9,13 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddRazorPages();
 builder.Services.AddControllersWithViews();
-builder.Services.AddTransient<IPetShopService, PetShopService>();
+//builder.Services.AddAuthentication();
+builder.Services.AddScoped<IPetShopService, PetShopService>();
+builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddTransient<IAnimalRepository, AnimalRepository>();
 builder.Services.AddTransient<ICategoryRepository, CategoryRepository>();
 builder.Services.AddTransient<ICommentRepository, CommentRepository>();
 builder.Services.AddDbContext<PetShopContext>(options => options.UseSqlite("Data Source=c:\\temp\\PetShop.db"));
-//builder.Services.AddDbContext<CommentContext>(options => options.UseSqlite("Data Source=c:\\temp\\PetShopComments.db"));
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -25,11 +27,8 @@ if (!app.Environment.IsDevelopment())
 using (var scope = app.Services.CreateScope())
 {
     var Ctx = scope.ServiceProvider.GetRequiredService<PetShopContext>();
-    //var CommCtx = scope.ServiceProvider.GetRequiredService<CommentContext>();
     Ctx.Database.EnsureDeleted();
-    //CommCtx.Database.EnsureDeleted();
     Ctx.Database.EnsureCreated();
-    //CommCtx.Database.EnsureCreated();
 }
 
 
@@ -38,7 +37,11 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
+//app.UseMiddleware<BasicAuthMiddleware>();
+
 app.UseAuthorization();
+
+//app.UseAuthentication();
 
 app.UseEndpoints(endpoints =>
 {

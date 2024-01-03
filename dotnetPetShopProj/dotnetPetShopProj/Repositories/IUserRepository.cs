@@ -1,10 +1,10 @@
-﻿using dotnetPetShopProj.Models;
+﻿using dotnetPetShopProj.Entities;
 
 namespace dotnetPetShopProj.Repositories
 {
     public interface IUserRepository
     {
-        public List<UserEntity> GetAll();
+        public List<User> GetAll();
 
     }
 }

@@ -1,15 +1,35 @@
-﻿using dotnetPetShopProj.Services;
+﻿using dotnetPetShopProj.Models;
+using dotnetPetShopProj.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace dotnetPetShopProj.Controllers
 {
+    [Authorize]
     public class AdminController : Controller
     {
 
         //adding http post and log in and LogOn method - open redirection attack
 
         IPetShopService _petShopService;
-        public AdminController(IPetShopService petShopService) => _petShopService = petShopService;
+        IUserService _userService;
+        public AdminController(IPetShopService petShopService, IUserService userService)
+        {
+            _petShopService = petShopService;
+            _userService = userService;
+        }
+
+        [AllowAnonymous]
+        [HttpPost("authenticate")]
+        public async Task<IActionResult> Authenticate([FromBody] AuthenticateModel model)
+        {
+            var user = await _userService.Authenticate(model.Username, model.Password);
+
+            if (user == null)
+                return BadRequest(new { message = "Username or password is incorrect" });
+
+            return Ok(user);
+        }
 
         public IActionResult Index() => View();
 

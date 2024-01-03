@@ -9,6 +9,14 @@
       "PackagePath": "staticwebassets\\AnimalComments\\ParrotComments.txt"
     },
     {
+      "Id": "C:\\Users\\galma\\Desktop\\dotnetPetShop\\dotnetPetShopProj\\dotnetPetShopProj\\wwwroot\\css\\Home.css",
+      "PackagePath": "staticwebassets\\css\\Home.css"
+    },
+    {
+      "Id": "C:\\Users\\galma\\Desktop\\dotnetPetShop\\dotnetPetShopProj\\dotnetPetShopProj\\wwwroot\\css\\nicepage.css",
+      "PackagePath": "staticwebassets\\css\\nicepage.css"
+    },
+    {
       "Id": "C:\\Users\\galma\\Desktop\\dotnetPetShop\\dotnetPetShopProj\\dotnetPetShopProj\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
